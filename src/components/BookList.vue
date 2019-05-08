@@ -2,7 +2,7 @@
   <div>
     <h1>{{title}}</h1>
     <ul>
-      <book-item v-for="book in books" :book="book"></book-item>
+      <book-item v-for="book in books" :book="book" :key="books.indexOf(book)"></book-item>
     </ul>
     <book-form @addBook='appendBook' />
   </div>
